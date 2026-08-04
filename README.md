@@ -36,11 +36,30 @@ opened a device's card - the key is never written to disk unencrypted).
 ## Prerequisites
 
 - A rooted Android device (physical phone or emulator) with the Danfoss
-  Ally app (`com.danfoss.ally`) installed and logged in.
+  Ally app (`com.danfoss.ally`) installed and logged in. **Root must be
+  explicitly enabled** - on an emulator this is virtually never on by
+  default, it's a setting you have to turn on yourself (see below).
 - `adb` on your computer, with the device connected and authorized.
 - `frida-server` running on the device (must match your local `frida` pip
   package version and the device's CPU architecture).
 - `pip install frida` on your computer.
+
+Tested on: Windows 11 (build 10.0.26100), [LDPlayer](https://www.ldplayer.net/)
+14.0.18.0. Other Windows versions/emulators/real phones may work but
+haven't been verified - see the disclaimer above.
+
+### Enabling root on LDPlayer
+
+Root is **off by default** and must be turned on manually, or `adb shell
+su` will fail even though the emulator itself is running fine:
+
+1. Open the emulator's own settings (gear icon in the side toolbar of the
+   emulator window itself, not Android's settings inside it).
+2. Under the **Basic settings** tab, find **Root permission** (or similarly
+   worded - toggle names vary slightly by LDPlayer version) and turn it on.
+3. Restart the emulator instance for it to take effect.
+
+Verify with `python check_env.py` - it checks `adb shell su -c id` for you.
 
 Run [`check_env.py`](check_env.py) first - it verifies all of the above
 read-only (no writes to the device) and tells you exactly what's missing
