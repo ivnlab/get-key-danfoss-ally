@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+credentials.py
+credentials_snippet.py
+*.log
+crash_logcat_*.txt
