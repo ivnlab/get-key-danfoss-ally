@@ -21,7 +21,7 @@ Zigbee-суб-устройств) прямо из памяти процесса 
 Ally, не требуя заранее знать ни один device_id.
 
 Автоматизирует ручную процедуру, описанную в
-[`docs/LOCAL_KEY_EXTRACTION_METHOD.md`](docs/LOCAL_KEY_EXTRACTION_METHOD.md).
+[`docs/LOCAL_KEY_EXTRACTION_METHOD.ru.md`](docs/LOCAL_KEY_EXTRACTION_METHOD.ru.md).
 Там же объясняется, *почему* это вообще работает (коротко: приложение
 держит свой кэш Tuya-устройств, включая `local_key`, простым JSON в памяти
 после того как открыта карточка устройства - на диск ключ в
