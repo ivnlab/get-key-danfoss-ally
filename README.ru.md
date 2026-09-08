@@ -27,12 +27,10 @@ Ally, не требуя заранее знать ни один device_id.
 после того как открыта карточка устройства - на диск ключ в
 расшифрованном виде не пишется).
 
-Родственные проекты:
+Родственный проект
 [`danfoss-ally-local`](https://github.com/ivnlab/danfoss-ally-local)
 (интеграция для Home Assistant, для которой этот инструмент и добывает
-credentials) и
-[`danfoss-ally-tuya`](https://github.com/ivnlab/danfoss-ally-tuya)
-(архивный первый вариант через `tuya_local`).
+credentials).
 
 ## Чего инструмент НЕ делает
 
